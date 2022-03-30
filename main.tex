@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+%\usepackage{fullpage}
+\usepackage{fancyhdr}
+\usepackage[margin = 1in, headheight = 13.6pt]{geometry}
+\usepackage{ifthen}
+
+
+\title{Cloname}
+\author{Bea Graboloza}
+\date{March 2022}
+
+
+\input{commands}
+
+
+%% We create a `docTitle` variable that references the document's title
+\makeatletter
+\let\docTitle\@title
+\makeatother
+
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\rhead{de latex}
+\lhead{Documento bacan}
+\rfoot{Page \thepage}
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\renderHeader{\logo}{\courseID}{\courseName}{\city}{\country}
+
+\begin{center}
+    \renderTitle[\docSubtitle]{\docTitle}
+\end{center}
+
+\pagestyle{fancy}
+
+\newpage
+
+\section{Introduction}
+
+\section{Clonazepam}
+
+\end{document}
